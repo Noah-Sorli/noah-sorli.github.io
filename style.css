@@ -48,15 +48,24 @@ header {
 	list-height: 0.3vw;
 }
 
+
+
 nav {
-	display: flex;
-	flex-wrap: wrap;
-  	justify-content: space-between; /* pousse les éléments aux extrémités */
-  	align-items: center;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: center;
 }
 
-nav a:first-child {
-  margin-right: auto; /* envoie tout le reste à droite */
+nav .gauche {
+}
+
+nav .droite {
+    display: flex;
+    flex-wrap: wrap; /* pour permettre le wrap */               /* prend toute la largeur disponible */
+    gap: 0.3vw;                 /* espace entre les boutons */
+    margin-top: 0.5vh;
+    margin-left: auto;     /* pousse tout à droite */
+
 }
 
 nav button {
@@ -75,7 +84,15 @@ nav button {
 nav button#active {
 	background-color: var(--white);
 }
-
+nav button .gros{
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0 10px;
+	white-space: nowrap;
+}
+nav button .normal{
+	white-space: nowrap;
+}
 nav button:hover{
 	transform: scale(1.05);
 	background-color: #2D719C;
@@ -87,21 +104,32 @@ nav button#active {
 }
 
 footer {
+	display: flex;
+    flex-direction: column; /* copy à gauche (on va centrer avec flex) et contact à droite */
+    align-items: center;
 	background-image: linear-gradient(to top, #75B0D1 0%, #75B0D1 65%, var(--white) 100%);
 	background-blend-mode: normal;
-	margin: 0.5vh -2vw;
-	padding: 40px 1vw;
-	text-align: center;
+	margin: 0vh -2vw;
+	padding: 1vh 1vw;
 }
 
+footer .copy {
+	margin: 5vh 0 -1vh 0;
+	text-align: center;
+	
+}
 footer .contact {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	column-gap: 10px;
-	row-gap: 5px;
+	gap: 10px;
+	margin-left: auto;
 }
+footer .contact p {
+    margin: 0.3vh 0;   /* supprime les marges par défaut */
+}
+
 @media screen and (max-width: 768px){
 	.corp {flex-direction: column;}
 	.corp .left img {width: 100%;}
@@ -120,6 +148,4 @@ nav button {
 	margin: 1vw;
 	padding: 5px 10px;
 }
-}
-
 }
