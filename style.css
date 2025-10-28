@@ -47,7 +47,9 @@ header {
 	list-height: 0.3vw;
 }
 
-
+.corp .left img {
+	border-radius: 30px;
+}
 
 nav {
     display: flex;
