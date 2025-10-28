@@ -1,10 +1,125 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Document sans nom</title>
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Asap:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Varela+Round&display=swap');
+	
+:root {
+	--grey: #04283E
+}
+:root {
+	--white: #F9FFFF
+}
+	
+html{
+		scroll-behavior: smooth;
+	background-color: var(--white)
+}
 
-<body>
-</body>
-</html>
+body{
+	font-family:'Varela Round', sans-serif;
+	margin: 0vw 2vw;
+	color: var(--grey);
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100vh;
+	/* 100% de la hauteur de la fenêtre */
+
+}
+
+.title {
+	font-family:'Alan Sans', sans-serif;
+	
+}
+
+.corp{
+	display: flex;
+	flex: 1;
+	
+}
+
+header {
+	margin: 0.7vw 0.7vw 2vw 0.7vw;
+}
+.corp .right h1 {
+	text-align: center;
+	font-size: 2.75vw;
+}
+
+.corp .right p {
+	margin: 0vw 0vw 0vw 1vw;
+	font-size: 1.7vw;
+	list-height: 0.3vw;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+  	justify-content: space-between; /* pousse les éléments aux extrémités */
+  	align-items: center;
+}
+
+nav a:first-child {
+  margin-right: auto; /* envoie tout le reste à droite */
+}
+
+nav button {
+	margin: 0.3vw;
+	padding: 10px 20px;
+	border: none;
+	font-family:'Alan Sans', sans-serif;
+	color : var(--grey);
+	cursor: pointer;
+	transition: all 0.3s;
+	background-color: #D5DDE8;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+nav button#active {
+	background-color: var(--white);
+}
+
+nav button:hover{
+	transform: scale(1.05);
+	background-color: #2D719C;
+	color: var(--white)
+}
+
+nav button#active {
+	color: var(--grey);
+}
+
+footer {
+	background-image: linear-gradient(to top, #75B0D1 0%, #75B0D1 65%, var(--white) 100%);
+	background-blend-mode: normal;
+	margin: 0.5vh -2vw;
+	padding: 40px 1vw;
+	text-align: center;
+}
+
+footer .contact {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	column-gap: 10px;
+	row-gap: 5px;
+}
+@media screen and (max-width: 768px){
+	.corp {flex-direction: column;}
+	.corp .left img {width: 100%;}
+	
+.corp .right h1 {
+	text-align: center;
+	font-size: 8vw;
+}
+
+.corp .right p {
+	margin: 0vw 0vw 0vw 1vw;
+	font-size: 3vw;
+	list-height: 0.3vw;
+}
+nav button {
+	margin: 1vw;
+	padding: 5px 10px;
+}
+}
+
+}
