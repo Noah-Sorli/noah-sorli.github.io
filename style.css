@@ -76,7 +76,7 @@ nav button {
 	font-family:'Alan Sans', sans-serif;
 	color : var(--grey);
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: all 0.3s ease;
 	background-color: #D5DDE8;
 	border-radius: 10px;
 	font-size: 15px;
@@ -203,14 +203,13 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		gap: 10spx;
+		gap: 5px;
 		padding: 10px 0px 10px 10px;
 		border-radius: 10px;
 		background-color: transparent;
-		transition: background-color 0.3s ease;
-		transition: display 0.3s ease;
-		transition: transform 0.3s ease;
+		transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 		z-index: 1000;
+		opacity: O;
 	}
 	
 	nav .burger-wrapper.open {
@@ -220,7 +219,8 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		border-radius: 10px;
 		position: absolute;
 		padding-top: 5px;
-		margin-top: 10px
+		margin-top: 10px;
+		opacity: 1;
 	}
 	
 	nav .burger-wrapper #burger {
@@ -234,8 +234,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		cursor: pointer;
 		justify-content: center;
 		margin-bottom: 5px;
-		transition: background-color 0.3s ease;
-		transition: transform 0.3s ease;
+		transition:  transform 0.3s ease;
 	}
 	
 	nav .burger-wrapper #burger.open {
@@ -243,6 +242,22 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		transform: translateX(-5px);
   	}
 
+	nav .burger-wrapper .droite  button{
+		text-align: end;
+		background-color: transparent;
+	}
+	
+	nav .burger-wrapper .droite  button{
+		text-align: end;
+		background-color: transparent;
+	}
+	
+	nav .burger-wrapper .droite button:hover{
+		transform: scale(1.05);
+		background-color: #2D719C;
+		color: var(--white)
+	}
+	
 	nav .burger-wrapper .droite {
 		display: none; /* le menu disparaît par défaut */
 		flex-direction: column; /* il deviendra vertical quand on l’ouvrira */
@@ -255,16 +270,14 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		top: 50px; /* juste sous le header */
 		right: 2vw;
 		z-index: 1000;
-		transition: all 0.3s ease;
+		opactity: 0;
+		transition: background-color 0.3s, opacity 0.3s;
 	 }
-	
-	nav .burger-wrapper .droite  button{
-		text-align: end;
-	}
 
 	  /* Quand on ajoutera la classe .open (via JS), on l’affichera */
 	nav .burger-wrapper .droite.open {
 		display: flex;
 		background-color: transparent;
+		opacity: 1;
 	}
 }
