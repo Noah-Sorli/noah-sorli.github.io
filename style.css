@@ -207,8 +207,9 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		padding: 10px 0px 10px 10px;
 		border-radius: 10px;
 		background-color: transparent;
-		transition: all 0.3s ease;
+		transition: background-color 0.3s ease;
 		transition: display 0.3s ease;
+		transition: transform 0.3s ease;
 		z-index: 1000;
 	}
 	
