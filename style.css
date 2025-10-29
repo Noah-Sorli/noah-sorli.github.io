@@ -60,7 +60,7 @@ nav {
 nav .gauche {
 }
 
-nav .droite {
+nav .burger-wrapper {
     display: flex;
     flex-wrap: wrap; /* pour permettre le wrap */               /* prend toute la largeur disponible */
     gap: 0.3vw;                 /* espace entre les boutons */
@@ -132,7 +132,7 @@ footer .contact p {
 }
 
 
-#burger {
+nav .burger-wrapper #burger {
   display: none; /* masqué par défaut (on ne le voit pas sur ordi) */
   flex-direction: column;
   justify-content: space-between;
@@ -145,7 +145,7 @@ footer .contact p {
   margin-left: auto; /* pousse le burger à droite */
 }
 
-.burger-bar {
+nav .burger-wrapper .burger-bar {
 	width: 80%;
 	height: 4px;
 	background-color: var(--grey);
@@ -154,16 +154,16 @@ footer .contact p {
 	margin: 2px 0;
 }
 
-nav #burger.open .burger-bar:nth-child(1) {
+nav .burger-wrapper #burger.open .burger-bar:nth-child(1) {
 	transform: rotate(45deg) translate(10px, 1px);
 	justify-content: flex-start;
 }
 
-nav #burger.open .burger-bar:nth-child(2) {
+nav .burger-wrapper #burger.open .burger-bar:nth-child(2) {
 	  opacity: 0; /* barre du milieu disparaît */
 }
 
-#burger.open .burger-bar:nth-child(3) {
+nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	transform: rotate(-45deg) translate(10px, -1px);
 	justify-content: flex-start;
 	
@@ -184,37 +184,70 @@ nav #burger.open .burger-bar:nth-child(2) {
 		font-size: 3vw;
 		list-height: 0.3vw;
 	}
-	nav button {
+	
+	nav button{
 		margin: 1vw;
-		padding: 5px 10px;
+		padding: 5px;
 	}
-	nav #burger {
+	nav .burger-wrapper .droite button {
+		margin: 0.5vw -5px 0.5vw 0.5vw;
+		padding: 10px;
+	}
+	 
+	
+	
+	nav .burger-wrapper {
+		position: absolute;
+		top: 0;
+		right: 2vw;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 10spx;
+		padding: 10px 0px 10px 10px;
+		border-radius: 10px;
+		background-color: transparent;
+		transition: background-color 0.3s ease;
+		z-index: 1000;
+	}
+	
+	nav .burger-wrapper.open {
+		background-color: #D5DDE8;
+		width: 170px;
+		height: 295px;
+		border-radius: 10px;
+		position: absolute;
+		padding-top: 5px;
+		margin-top: 10px
+	}
+	
+	nav .burger-wrapper #burger {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 45px;           
 		height: 35px;
-		/*background-color: #D5DDE8;*/
 		border-radius: 8px;
-		border: none;
-		padding: 0;            
+		border: none;         
 		cursor: pointer;
 		justify-content: center;
+		margin-bottom: 5px;
 		transition: background-color 0.3s ease;
 		transition: transform 0.3s ease;
 	}
 	
-	nav #burger.open {
-    	background-color: #D5DDE8; /* même couleur que le menu*/
-		transform: translateX(8px);
+	nav .burger-wrapper #burger.open {
+    	/*background-color: #D5DDE8; /* même couleur que le menu*/
+		transform: translateX(-5px);
   	}
 
-	nav .droite {
+	nav .burger-wrapper .droite {
 		display: none; /* le menu disparaît par défaut */
 		flex-direction: column; /* il deviendra vertical quand on l’ouvrira */
-		gap: 10px;
+		align-items: flex-end;
+		gap: 5px;
 		background-color: #D5DDE8;
-		padding: 10px;
+		padding: 0px -20px 0px 0px;
 		border-radius: 10px;
 		position: absolute; /* pour le faire flotter */
 		top: 50px; /* juste sous le header */
@@ -222,9 +255,14 @@ nav #burger.open .burger-bar:nth-child(2) {
 		z-index: 1000;
 		transition: all 0.3s ease;
 	 }
+	
+	nav .burger-wrapper .droite  button{
+		text-align: end;
+	}
 
 	  /* Quand on ajoutera la classe .open (via JS), on l’affichera */
-	nav .droite.open {
+	nav .burger-wrapper .droite.open {
 		display: flex;
+		background-color: transparent;
 	}
 }

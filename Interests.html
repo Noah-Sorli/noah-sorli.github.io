@@ -15,12 +15,19 @@
 				<div class="gauche">
 				<a href="index.html"> <button id="active"> <span class="gros"> Noah Sorli</span> <span class="normal">Engineering student</span></button></a>
 				</div>
-				<div class="droite">
-					<a href="Engineering courses.html"> <button>Engineering courses</button></a>
-					<a href="Mobility.html"><button>Mobility</button></a>
-					<a href="Civic Engagement.html"><button>Civic Engagement</button></a>
-					<a href="Careers.html"><button>Careers</button></a>
-					<a href="Interests.html"><button>Interests</button></a>
+				<div class="burger-wrapper">
+					<button id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-droit">
+						<span class="burger-bar"></span>
+						<span class="burger-bar"></span>
+						<span class="burger-bar"></span>
+					</button>
+					<div class="droite" id="menu-droit">
+						<a href="Engineering courses.html"> <button>Engineering courses</button></a>
+						<a href="Mobility.html"><button>Mobility</button></a>
+						<a href="Civic Engagement.html"><button>Civic Engagement</button></a>
+						<a href="Careers.html"><button>Careers</button></a>
+						<a href="Interests.html"><button>Interests</button></a>
+					</div>
 				</div>
 			</nav>
 	</header>
@@ -42,6 +49,18 @@
 		</div>
 
 	</footer>
-	
+	<script>
+		const burger = document.getElementById('burger');
+		const wrapper = document.querySelector('.burger-wrapper');
+		const menu = document.getElementById('menu-droit');
+
+		burger.addEventListener('click', () => {
+		  menu.classList.toggle('open');
+		  burger.classList.toggle('open');
+		  wrapper.classList.toggle('open'); // <-- on ouvre le fond autour du burger + menu
+		  const isOpen = menu.classList.contains('open');
+		  burger.setAttribute('aria-expanded', isOpen);
+		});
+	</script>
 </body>
 </html>
