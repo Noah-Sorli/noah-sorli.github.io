@@ -131,22 +131,100 @@ footer .contact p {
     margin: 0.3vh 0;   /* supprime les marges par défaut */
 }
 
+
+#burger {
+  display: none; /* masqué par défaut (on ne le voit pas sur ordi) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto; /* pousse le burger à droite */
+}
+
+.burger-bar {
+	width: 80%;
+	height: 4px;
+	background-color: var(--grey);
+	border-radius: 2px;
+	transition: all 0.3s ease;
+	margin: 2px 0;
+}
+
+nav #burger.open .burger-bar:nth-child(1) {
+	transform: rotate(45deg) translate(10px, 1px);
+	justify-content: flex-start;
+}
+
+nav #burger.open .burger-bar:nth-child(2) {
+	  opacity: 0; /* barre du milieu disparaît */
+}
+
+#burger.open .burger-bar:nth-child(3) {
+	transform: rotate(-45deg) translate(10px, -1px);
+	justify-content: flex-start;
+	
+}
+
 @media screen and (max-width: 768px){
+
 	.corp {flex-direction: column;}
 	.corp .left img {width: 100%;}
 	
-.corp .right h1 {
-	text-align: center;
-	font-size: 8vw;
-}
+	.corp .right h1 {
+		text-align: center;
+		font-size: 8vw;
+	}
 
-.corp .right p {
-	margin: 0vw 0vw 0vw 1vw;
-	font-size: 3vw;
-	list-height: 0.3vw;
-}
-nav button {
-	margin: 1vw;
-	padding: 5px 10px;
-}
+	.corp .right p {
+		margin: 0vw 0vw 0vw 1vw;
+		font-size: 3vw;
+		list-height: 0.3vw;
+	}
+	nav button {
+		margin: 1vw;
+		padding: 5px 10px;
+	}
+	nav #burger {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 45px;           
+		height: 35px;
+		/*background-color: #D5DDE8;*/
+		border-radius: 8px;
+		border: none;
+		padding: 0;            
+		cursor: pointer;
+		justify-content: center;
+		transition: background-color 0.3s ease;
+		transition: transform 0.3s ease;
+	}
+	
+	nav #burger.open {
+    	background-color: #D5DDE8; /* même couleur que le menu*/
+		transform: translateX(8px);
+  	}
+
+	nav .droite {
+		display: none; /* le menu disparaît par défaut */
+		flex-direction: column; /* il deviendra vertical quand on l’ouvrira */
+		gap: 10px;
+		background-color: #D5DDE8;
+		padding: 10px;
+		border-radius: 10px;
+		position: absolute; /* pour le faire flotter */
+		top: 50px; /* juste sous le header */
+		right: 2vw;
+		z-index: 1000;
+		transition: all 0.3s ease;
+	 }
+
+	  /* Quand on ajoutera la classe .open (via JS), on l’affichera */
+	nav .droite.open {
+		display: flex;
+	}
 }
