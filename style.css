@@ -395,6 +395,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 
 .bas div {
 	display: flex;
+	flex-direction: column;
 	align-content: center;
 	gap: 10px;
 }
@@ -403,7 +404,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-radius: 10px;
 }
 .bas div p {
-	margin-left: 10px
+	margin-left: 50px
 }
 
 #CV button {
