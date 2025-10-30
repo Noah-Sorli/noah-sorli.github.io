@@ -262,6 +262,23 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	margin-top: -20px;
 }
 
+.haut h2 {
+	margin-bottom: 40px;
+}
+
+.haut h3 {
+	margin-left: 20px
+}
+
+.haut h3 img {
+	width: 25px;
+	height: 15px;
+	object-fit: cover; 
+	vertical-align: middle;
+	margin-right: 8px;
+	border-radius: 3px;
+}
+
 .haut p {
 	text-align: justify;
 	text-justify: inter-word;
@@ -319,13 +336,15 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	flex-direction: row;
 	gap: 10px;
 	padding: 20px;
-	margin: 20px 40vw 20px 10vw;
+	margin: 20px 30vw 20px 10vw;
 	min-width: 200px;
 	background-color: #D5DDE8;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 40px;
 	border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 15px;
+	text-align: justify;
+	text-justify: inter-word;
 }
 .jobs img {
 	border-top-left-radius: 5px;
@@ -339,7 +358,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	justify-content: flex-end;
 	gap: 10px;
 	padding: 20px;
-	margin: 20px 10vw 20px 40vw;
+	margin: 20px 10vw 20px 30vw;
 	min-width: 200px;
 	background-color: #D5DDE8;
 	border-top-left-radius: 40px;
@@ -356,9 +375,55 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 .jobs2 .job {
 	justify-content: flex-end;
 	text-align: end;
+	text-justify: inter-word;
 }
 
+.jobs2 .job p {
+	text-align: justify;
+}
 
+.bas h2 {
+	margin-bottom: 40px;
+}
+.bas h3 {
+	margin-left: 20px;
+}
+
+.bas p {
+	margin-left: 50px;
+}
+
+.bas div {
+	display: flex;
+	align-content: center;
+	gap: 10px;
+}
+
+.bas div img {
+	border-radius: 10px;
+}
+.bas div p {
+	margin-left: 10px
+}
+
+#CV button {
+	margin: 0.3vw;
+	padding: 10px 20px;
+	border: none;
+	font-family:'Alan Sans', sans-serif;
+	color : var(--grey);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background-color: #D5DDE8;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+#CV button:hover{
+	transform: scale(1.05);
+	background-color: #2D719C;
+	color: var(--white)
+}
 @media screen and (max-width: 768px){
 
 	.corp {flex-direction: column;}
@@ -477,7 +542,8 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	}
 	
 	.jobs2 {
-	flex-direction: column;
+	flex-direction: column-reverse;
 	margin: 20px 10vw 20px 20vw;
+	justify-item: flex-end;align-items: flex-end
 	}
 }
