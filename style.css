@@ -18,9 +18,10 @@ body{
 	color: var(--grey);
 	display: flex;
   	flex-direction: column;
-  	min-height: 100vh;
-	/* 100% de la hauteur de la fenêtre */
-
+  	min-height: 100vh;/* 100% de la hauteur de la fenêtre */
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .title {
@@ -43,8 +44,64 @@ header {
 
 .corp .right p {
 	margin: 0vw 0vw 0vw 1vw;
-	font-size: 1.7vw;
-	list-height: 0.3vw;
+	font-size: 1.4vw;
+	list-height: 0.4vw;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.corp .right button {
+	margin: 0.3vw;
+	padding: 10px 20px;
+	border: none;
+	color : var(--grey);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background-color: #D5DDE8;
+	border-radius: 10px;
+	font-size: 30px;
+	font-family: 'Alan Sans';
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.corp .right button:hover{
+	transform: scale(1.05);
+	background-color: #2D719C;
+	color: var(--white)
+}
+
+.corp .right button#plein {
+	margin: 0.3vw;
+	padding: 10px 20px;
+	border: none;
+	color : var(--white);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background-color: #2D719C;
+	border-radius: 10px;
+	font-size: 30px;
+	font-family: 'Alan Sans';
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.corp .right button#plein:hover{
+	transform: scale(1.05);
+	background-color: var(--white);
+	color: #2D719C;
+	border: thick;
+	border-color: #2D719C
+}
+
+.corp .right .button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	gap: 1.5vw;
 }
 
 .corp .left img {
@@ -169,6 +226,139 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	
 }
 
+.lien-propre {
+	color: var(--grey);
+	font-family: 'Varela Round';
+	cursor: pointer;
+	text-decoration: none;
+	background: linear-gradient(120deg, #A5C7D6 0%, #ADD0E0 100%);
+	border-radius: 4px;
+  	padding: 2px 4px;
+	background-size: 100% 0.2em;
+  	background-repeat: no-repeat;
+  	background-position: 0 88%;
+  	transition: background-size 0.1s ease-in;
+}
+.lien-propre:hover {
+	background-size: 100% 100%;
+  	
+}
+
+.video {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	
+}
+
+.haut {
+	flex: 1;
+	dispaly: flex;
+	flex-direction: column;
+	gap: 0px;
+}
+.haut h1 {
+	font-size: 50px;
+	margin-top: -20px;
+}
+
+.haut p {
+	text-align: justify;
+	text-justify: inter-word;
+	padding: 0vh 4vw 0vh 4vw;
+}
+
+.semesters {
+	flex: 1;
+}
+
+.semesters h2 {
+	padding-left: 3vw;
+	font-size: 30px;
+}
+
+.semesters div {
+	padding-left: 5vw;
+	display: flex;
+	gap: 1vh
+}
+
+.corp .haut .boutons {
+	margin-top: -40px;
+}
+
+.corp .haut .boutons button {
+	margin: 0.3vw;
+	padding: 10px 20px;
+	border: none;
+	font-family:'Alan Sans', sans-serif;
+	color : var(--grey);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background-color: #D5DDE8;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 2px;
+	font-size: 15px;
+}
+
+.corp .haut .boutons button:hover{
+	transform: scale(1.05);
+	background-color: #2D719C;
+	color: var(--white)
+}
+
+.sections {
+	flex: 1;
+}
+
+
+.jobs {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	padding: 20px;
+	margin: 20px 40vw 20px 10vw;
+	min-width: 200px;
+	background-color: #D5DDE8;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 15px;
+}
+.jobs img {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 5px;
+}
+.jobs2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: 10px;
+	padding: 20px;
+	margin: 20px 10vw 20px 40vw;
+	min-width: 200px;
+	background-color: #D5DDE8;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 40px;
+}
+.jobs2 img {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 20px;
+}
+.jobs2 .job {
+	justify-content: flex-end;
+	text-align: end;
+}
+
+
 @media screen and (max-width: 768px){
 
 	.corp {flex-direction: column;}
@@ -279,5 +469,15 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		display: flex;
 		background-color: transparent;
 		opacity: 1;
+	}
+	
+	.jobs {
+	flex-direction: column;
+	margin: 20px 20vw 20px 10vw;
+	}
+	
+	.jobs2 {
+	flex-direction: column;
+	margin: 20px 10vw 20px 20vw;
 	}
 }
