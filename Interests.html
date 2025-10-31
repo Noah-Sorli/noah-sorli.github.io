@@ -31,14 +31,8 @@
 				</div>
 			</nav>
 	</header>
-	
-	<div class="corp">
-		<div class="haut">
-			<h1 class="title">Interests</h1>
-		</div>
-	</div>
-	<div class="bas">
-			<div class ="activities">
+<div class="bas">
+		<div class ="activities">
 				<div>
 					<img src="images/P1490496.jpg" alt ="Photo de moi prennat une photo" height="200">
 				</div>
@@ -60,7 +54,7 @@
 			</div>
 			<div class ="activities2">
 				<div class ="activity">
-					<h2>Sport</h2>
+					<h2>Sports</h2>
 				</div>
 					<img src="images/image.jpg" alt="Logo de Corleone pizza" height="200">
 			</div>
@@ -71,21 +65,20 @@
 				</div>
 			</div>
 		</div>
-	<footer>
+<footer>
 		<div class="copy">
 		<p>&copy; Copyright Noah Sorli, 2025</p>
 		</div>
 		<div class="contact">
-			<p>Linkedin</p>
-			<p>Instagram</p>
-			<p>X</p>
-			<p>Facebook</p>
-			<p>Gmail</p>
-			<p>Whatsapp</p>
+			<a href="https://www.linkedin.com/in/noah-sorli-830102385" class="lien-propre"><p><i class="fa-brands fa-square-linkedin"></i> LinkedIn</p></a>
+			<a href="https://www.instagram.com/noahsor_" class="lien-propre"><p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
+			<a href="https://x.com/NoahSorli" class="lien-propre"><p><i class="fa-brands fa-x-twitter"></i> X</p></a>
+			<a href="https://www.facebook.com/people/Noah-Sorli/pfbid0iX5wc9GLyFHBSATDTRvrFuEpaiAdqnBGnrAHHo3RoMwjUvXsTr36mtzXiA7ykojrl/" class="lien-propre"><p><i class="fa-brands fa-facebook-f"></i>Facebook</p></a>
+			<a href="#" onclick="copyToClipboard('noah.sorli@etu.toulouse-inp.fr'); return false;" class="lien-propre"><p><i class="fa-solid fa-envelope"></i> Mail</p></a>
+			<a href="#" onclick="copyToClipboard('06 52 32 13 09'); return false;" class="lien-propre"><p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p></a>
 		</div>
-
 	</footer>
-	<script>
+<script>
 		const burger = document.getElementById('burger');
 		const wrapper = document.querySelector('.burger-wrapper');
 		const menu = document.getElementById('menu-droit');
@@ -97,7 +90,11 @@
 		  const isOpen = menu.classList.contains('open');
 		  burger.setAttribute('aria-expanded', isOpen);
 		});
+	function copyToClipboard(text) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("Content copied to clipboard !"))
+      .catch(err => console.error("Error copying text:", err));
+  }
 	</script>
 </body>
-
 </html>

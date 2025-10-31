@@ -283,21 +283,6 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	padding: 0vh 4vw 0vh 4vw;
 }
 
-.semesters {
-	flex: 1;
-}
-
-.semesters h2 {
-	padding-left: 3vw;
-	font-size: 30px;
-}
-
-.semesters div {
-	padding-left: 5vw;
-	display: flex;
-	gap: 1vh
-}
-
 .corp .haut .boutons {
 	margin-top: -40px;
 }
@@ -343,7 +328,13 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-bottom-right-radius: 15px;
 	text-align: justify;
 	text-justify: inter-word;
+	transition: transform 0.3s ease;
 }
+
+.jobs:hover {
+	transform: scale(1.05);
+}
+
 .jobs img {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 20px;
@@ -363,7 +354,13 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 40px;
+	transition: transform 0.3s ease;
 }
+
+.jobs2:hover {
+	transform: scale(1.05);
+}
+
 .jobs2 img {
 	border-top-left-radius: 20px;
 	border-top-right-radius: 5px;
@@ -383,7 +380,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 .bas .activities {
 	display: flex;
 	flex-direction: row;
-	align-content: center;
+	align-item: center;
 	justify-content: space-between;
 	gap: 10px;
 	padding: 20px;
@@ -397,8 +394,14 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	text-align: justify;
 	text-justify: inter-word;	
 	font-size: 2.5vw;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+}
+.bas .activities:hover {
+	transform: scale(1.05);
 }
 .bas .activities img {
+	/*widht: 1vh;*/
 	border-top-left-radius: 5px;
 	border-top-right-radius: 20px;
 	border-bottom-left-radius: 20px;
@@ -427,14 +430,24 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 40px;
 	font-size: 2.5vw;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+.bas .activities2:hover {
+	transform: scale(1.05);
 }
 .bas .activities2 div {
 	display: flex;
 	justify-content: center; /* centre horizontalement */
 	align-items: center;
+	flex: 1;
 }
 
 .bas .activities2 img {
+	/*height: 20vw;*/
 	border-top-left-radius: 20px;
 	border-top-right-radius: 5px;
 	border-bottom-left-radius: 5px;
@@ -516,6 +529,59 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	background-color: #2D719C;
 	color: var(--white)
 }
+
+.Courses {
+	flex: 1;
+}
+
+.Courses h1 {
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.Courses h2 {
+	padding-left: 2.5vw;
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+.Courses h3 {
+	padding-left: 4vw;
+	margin-top: 30px;
+	margin-bottom: -10px;
+}
+
+.Courses p {
+	text-align: justify;
+	text-justify: inter-word;
+	padding: 0vh 4vw 0vh 4vw;
+}
+
+.Courses .bulletlist {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	
+	
+}
+
+.Courses .bulletlist div {
+	padding-left: 6vw;
+	margin:0;
+	margin-bottom: -20px;
+	display: flex;
+	gap: 30px;
+}
+
+.Courses .projects {
+	display: flex;
+}
+
+.Courses .projects img {
+	border-radius: 20px;
+}
+
+
 @media screen and (max-width: 768px){
 
 	.corp {flex-direction: column;}
@@ -644,12 +710,33 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 		flex-direction: column;
 		margin: 20px 20vw 20px 10vw;
 		font-size: 5vw;
+		align-items: center;
 	}
-	
+	.bas .activities img{
+		height: 40vw;
+	}
+	.bas .activities .activity h2 {
+		text-align: center;
+
+	}
 	.bas .activities2 {
 		flex-direction: column-reverse;
 		margin: 20px 10vw 20px 20vw;
 		font-size: 5vw;
 	}
-	
+	.bas .activities2 img{
+		height: 40vw;
+	}
+	.bas .activities2 .activity h2 {
+		text-align: center;
+	}	
+	.Courses .projects {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+	.basM div {
+		flex-direction: column;
+		align-items: center;
+	}
 }

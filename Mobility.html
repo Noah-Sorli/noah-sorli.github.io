@@ -71,14 +71,13 @@
 		<p>&copy; Copyright Noah Sorli, 2025</p>
 		</div>
 		<div class="contact">
-			<p>Linkedin</p>
-			<p>Instagram</p>
-			<p>X</p>
-			<p>Facebook</p>
-			<p>Gmail</p>
-			<p>Whatsapp</p>
+			<a href="https://www.linkedin.com/in/noah-sorli-830102385" class="lien-propre"><p><i class="fa-brands fa-square-linkedin"></i> LinkedIn</p></a>
+			<a href="https://www.instagram.com/noahsor_" class="lien-propre"><p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
+			<a href="https://x.com/NoahSorli" class="lien-propre"><p><i class="fa-brands fa-x-twitter"></i> X</p></a>
+			<a href="https://www.facebook.com/people/Noah-Sorli/pfbid0iX5wc9GLyFHBSATDTRvrFuEpaiAdqnBGnrAHHo3RoMwjUvXsTr36mtzXiA7ykojrl/" class="lien-propre"><p><i class="fa-brands fa-facebook-f"></i>Facebook</p></a>
+			<a href="#" onclick="copyToClipboard('noah.sorli@etu.toulouse-inp.fr'); return false;" class="lien-propre"><p><i class="fa-solid fa-envelope"></i> Mail</p></a>
+			<a href="#" onclick="copyToClipboard('06 52 32 13 09'); return false;" class="lien-propre"><p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p></a>
 		</div>
-
 	</footer>
 	<script>
 		const burger = document.getElementById('burger');
@@ -92,6 +91,11 @@
 		  const isOpen = menu.classList.contains('open');
 		  burger.setAttribute('aria-expanded', isOpen);
 		});
+		function copyToClipboard(text) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("Content copied to clipboard !"))
+      .catch(err => console.error("Error copying text:", err));
+  }
 	</script>
 </body>
 </html>
