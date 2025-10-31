@@ -432,8 +432,8 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	font-size: 2.5vw;
 	transition: transform 0.3s ease;
 	overflow: hidden;
-	box-sizing: border-box;
-	max-width: 100%;
+box-sizing: border-box;
+  max-width: 100%;
 }
 
 .bas .activities2:hover {
@@ -548,7 +548,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 .Courses h3 {
 	padding-left: 4vw;
 	margin-top: 30px;
-	margin-bottom: -10px;
+	margin-bottom: 20px;
 }
 
 .Courses p {
@@ -561,16 +561,22 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	display: flex;
 	flex-direction: column;
 	gap: 1px;
+	padding-left: 6vw;
+	
 	
 	
 }
 
 .Courses .bulletlist div {
-	padding-left: 6vw;
-	margin:0;
-	margin-bottom: -20px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
 	display: flex;
-	gap: 30px;
+	gap: 20px;
+}
+.Courses .bulletlist div  p{
+	margin:0 0 -5px 0;
+	padding:0;
 }
 
 .Courses .projects {
