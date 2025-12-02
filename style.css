@@ -393,7 +393,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-bottom-right-radius: 15px;
 	text-align: justify;
 	text-justify: inter-word;	
-	font-size: 30px;
+	font-size: 2vw;
 	transition: transform 0.3s ease;
 	overflow: hidden;
 }
@@ -429,7 +429,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 40px;
-	font-size: 30px;
+	font-size: 2vw;
 	transition: transform 0.3s ease;
 	overflow: hidden;
 box-sizing: border-box;
