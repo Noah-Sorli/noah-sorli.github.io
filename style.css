@@ -383,7 +383,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	align-item: center;
 	justify-content: space-between;
 	gap: 10px;
-	padding: 20px;
+	padding: 20px 40px 20px 20px;
 	margin: 20px 30vw 20px 10vw;
 	min-width: 200px;
 	background-color: #D5DDE8;
@@ -393,7 +393,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-bottom-right-radius: 15px;
 	text-align: justify;
 	text-justify: inter-word;	
-	font-size: 40px;
+	font-size: 30px;
 	transition: transform 0.3s ease;
 	overflow: hidden;
 }
@@ -421,7 +421,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	align-content: flex-start;
 	justify-content: space-between;
 	gap: 10px;
-	padding: 20px;
+	padding: 20px 20px 20px 40px;
 	margin: 20px 10vw 20px 30vw;
 	min-width: 200px;
 	background-color: #D5DDE8;
@@ -429,7 +429,7 @@ nav .burger-wrapper #burger.open .burger-bar:nth-child(3) {
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 40px;
-	font-size: 40px;
+	font-size: 30px;
 	transition: transform 0.3s ease;
 	overflow: hidden;
 box-sizing: border-box;
@@ -442,7 +442,7 @@ box-sizing: border-box;
 .bas .activities2 div {
 	display: flex;
 	justify-content: center; /* centre horizontalement */
-	align-items: center;
+	align-items: flex-start;
 	flex: 1;
 }
 
