@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noah Sorli — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav id="nav">
+    <span class="nav-logo">NS</span>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <header id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Technicien audiovisuel · Toulouse</p>
+      <h1 class="hero-name">Noah<br><span class="accent">Sorli</span></h1>
+      <p class="hero-tagline">
+        Étudiant ingénieur passionné de cinéma.<br>
+        Cadreur, technicien plateau, passionné de lumière et de post-production.
+      </p>
+      <a href="#projects" class="btn-primary">Voir les projets</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2 class="section-title">À propos</h2>
+        <p>
+          Étudiant en ingénierie à l'ENSEEIHT (Toulouse), je suis impliqué depuis un an dans
+          <strong>TVn7</strong>, l'association audiovisuelle de l'école, où j'occupe également
+          le rôle de trésorier. J'y ai touché à tous les postes : cadrage, réalisation,
+          régie image, son, et post-production.
+        </p>
+        <p>
+          Mon profil technique d'ingénieur nourrit mon approche du tournage — rigueur dans
+          la préparation, maîtrise du matériel, workflow structuré. Je suis à la recherche
+          d'un emploi étudiant (mi-juillet – fin août 2026) dans une société de production
+          audiovisuelle à Toulouse.
+        </p>
+        <div class="about-tags">
+          <span>Sony FX3 / FX6</span>
+          <span>DJI RS2 / RS4 Pro</span>
+          <span>Aputure / Godox</span>
+          <span>Premiere Pro</span>
+          <span>DaVinci Resolve</span>
+          <span>After Effects</span>
+          <span>MixPre-6</span>
+          <span>Transmission HF</span>
+        </div>
+      </div>
+      <div class="about-aside">
+        <div class="about-stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Projets majeurs</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num">2×</span>
+          <span class="stat-label">Prix en festival</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num">1 an</span>
+          <span class="stat-label">TVn7 — terrain</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section id="projects">
+    <h2 class="section-title centered">Projets</h2>
+    <div class="projects-list" id="projects-list">
+
+      <!--
+      ╔══════════════════════════════════════════════════════════════╗
+      ║  AJOUTER UN PROJET :                                         ║
+      ║  Copie un bloc <article class="project-card"> ci-dessous,   ║
+      ║  change :                                                    ║
+      ║    data-align="left" ou "right"                              ║
+      ║    data-link="URL_VIMEO_OU_YOUTUBE"                          ║
+      ║    src de <img> → ton image BTS ou screenshot                ║
+      ║    les textes titre, rôle, date, description, tags           ║
+      ╚══════════════════════════════════════════════════════════════╝
+      -->
+
+      <!-- ── PROJET 1 : Supernova ── -->
+      <article class="project-card" data-align="right" data-link="https://vimeo.com/TON_LIEN_SUPERNOVA">
+        <div class="project-visual">
+          <img src="img/supernova.jpg" alt="Supernova — clip musical" />
+          <div class="project-overlay">
+            <div class="overlay-inner">
+              <p class="overlay-role">Co-Réalisateur · Cadreur · Technicien</p>
+              <h3 class="overlay-title">Supernova</h3>
+              <p class="overlay-meta">Clip musical · Fév. – Mars 2026</p>
+              <p class="overlay-desc">
+                Caméra A (Sony FX3), préparation technique et optiques.
+                Préparation et installation éclairage (Aputure C120D, Godox X60).
+                Participation au montage, à l'étalonnage et à la création de VFX.
+              </p>
+              <div class="overlay-tags">
+                <span>Sony FX3</span><span>Aputure</span><span>VFX</span><span>Étalonnage</span>
+              </div>
+              <span class="overlay-cta">Voir le clip ↗</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── PROJET 2 : La Dernière Lettre ── -->
+      <article class="project-card" data-align="left" data-link="https://vimeo.com/TON_LIEN_DERNIERE_LETTRE">
+        <div class="project-visual">
+          <img src="img/derniere-lettre.jpg" alt="La Dernière Lettre — court métrage" />
+          <div class="project-overlay">
+            <div class="overlay-inner">
+              <p class="overlay-role">Réalisateur · Chef technique</p>
+              <h3 class="overlay-title">La Dernière Lettre</h3>
+              <p class="overlay-meta">Court métrage · Oct. 2025</p>
+              <p class="overlay-desc">
+                Cadrage, lumière, prise de son. Storyboard et préparation technique complète.
+                Montage et post-production. Coordination technique et artistique de l'équipe.
+              </p>
+              <div class="overlay-tags">
+                <span>🏆 Prix du Jury</span><span>🏆 Prix du Son</span><span>CDN — ENSEEIHT</span>
+              </div>
+              <span class="overlay-cta">Voir le film ↗</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── PROJET 3 : Just Dance IRL ── -->
+      <article class="project-card" data-align="right" data-link="https://vimeo.com/TON_LIEN_JUSTDANCE">
+        <div class="project-visual">
+          <img src="B:\Perso\Noah/img\justdance.jpg" alt="Just Dance IRL — vidéo VFX" />
+          <div class="project-overlay">
+            <div class="overlay-inner">
+              <p class="overlay-role">Réalisateur · VFX · Montage</p>
+              <h3 class="overlay-title">Récréation IRL Just Dance</h3>
+              <p class="overlay-meta">Vidéo VFX · Fév. 2025</p>
+              <p class="overlay-desc">
+                Direction du tournage et coordination d'un groupe d'acteurs.
+                Compositing, VFX et montage final. Recréation d'une interface de jeu vidéo
+                en prise de vue réelle.
+              </p>
+              <div class="overlay-tags">
+                <span>VFX</span><span>Compositing</span><span>After Effects</span>
+              </div>
+              <span class="overlay-cta">Voir la vidéo ↗</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-sub">Disponible mi-juillet – fin août 2026 · Toulouse · Mobile</p>
+      <div class="contact-links">
+        <a href="mailto:noah.sorli@orange.fr" class="contact-item">
+          <span class="contact-icon">✉</span>
+          noah.sorli@orange.fr
+        </a>
+        <a href="tel:0652321309" class="contact-item">
+          <span class="contact-icon">↗</span>
+          06 52 32 13 09
+        </a>
+      </div>
+      <a href="CV_Noah_Sorli.pdf" class="btn-primary" download>Télécharger le CV</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer>
+    <p>© 2026 Noah Sorli</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
