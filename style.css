@@ -160,22 +160,17 @@ nav button#active {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white)
-    background-image: url("images/Bottom.png"); /* Adaptez le chemin si besoin */
-    
-    /* 'cover' force l'image à remplir toute la hauteur du footer, 
-       quitte à dépasser et être coupée sur les côtés */
-    background-size: cover; 
-    
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    margin: 0vh -2vw;
-    padding: 1vh 1vw;
+	display: flex;
+	flex-direction: column; /* copy à gauche (on va centrer avec flex) et contact à droite */
+	align-items: center;
+	background-color: var(--white); /* Couleur de secours / raccord en bas si l'image est plus courte */
+	background-image: url("images/Bottom.png"); /* Adaptez le chemin et le nom de votre fichier */
+	background-size: cover; /* Étire sur toute la largeur en gardant les proportions */
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	margin: 0vh -2vw;
+	padding: 1vh 1vw;
 }
-
 footer .copy {
 	margin: 5vh 0 -1vh 0;
 	text-align: center;
