@@ -163,7 +163,7 @@ footer {
 	display: flex;
 	flex-direction: column; /* copy à gauche (on va centrer avec flex) et contact à droite */
 	align-items: center;
-	background-color: var(--white); /* Couleur de secours / raccord en bas si l'image est plus courte */
+	background-color: ##40B0CC; /* Couleur de secours / raccord en bas si l'image est plus courte */
 	background-image: url("images/Bottom.png"); /* Adaptez le chemin et le nom de votre fichier */
 	background-size: cover; /* Étire sur toute la largeur en gardant les proportions */
 	background-position: bottom center;
