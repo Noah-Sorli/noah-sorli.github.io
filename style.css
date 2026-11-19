@@ -163,7 +163,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #75B0D1; /* Couleur de fond par défaut */
+    background-color: var(--white)
     background-image: url("images/Bottom.png"); /* Adaptez le chemin si besoin */
     
     /* 'cover' force l'image à remplir toute la hauteur du footer, 
