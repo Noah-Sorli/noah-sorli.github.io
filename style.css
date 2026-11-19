@@ -161,10 +161,13 @@ nav button#active {
 
 footer {
 	display: flex;
-    flex-direction: column; /* copy à gauche (on va centrer avec flex) et contact à droite */
-    align-items: center;
-	background-image: linear-gradient(to top, #75B0D1 0%, #75B0D1 65%, var(--white) 100%);
-	background-blend-mode: normal;
+	flex-direction: column; /* copy à gauche (on va centrer avec flex) et contact à droite */
+	align-items: center;
+	background-color: #75B0D1; /* Couleur de secours / raccord en bas si l'image est plus courte */
+	background-image: url("images/Bottom.png"); /* Adaptez le chemin et le nom de votre fichier */
+	background-size: 100% auto; /* Étire sur toute la largeur en gardant les proportions */
+	background-position: bottom center;
+	background-repeat: no-repeat;
 	margin: 0vh -2vw;
 	padding: 1vh 1vw;
 }
